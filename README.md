@@ -8,9 +8,11 @@ preprocessing:
 - train/test split
     - on language (imbalanced classes!)
     - on speaker type (HL/FL)
+    
 clasification type:
     - multiclass
     - intrinsic authorship attribution
+
 algorythm:
 1. tokenization for word n-grams (of length n)
 2. truncation so that all texts are of the same length (all but one model)
