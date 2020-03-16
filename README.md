@@ -4,6 +4,14 @@
 [presentation](https://docs.google.com/presentation/d/1BZhBRqKzosFH2LZMjeQsJ-l_2NAoIszGsNeXn3zk0Z8/edit#slide=id.g7e294f0bb6_0_100)
 
 ### PIPELINE:
+preprocessing:
+- train/test split
+    - on language (imbalanced classes!)
+    - on speaker type (HL/FL)
+clasification type:
+    - multiclass
+    - intrinsic authorship attribution
+algorythm:
 1. tokenization for word n-grams (of length n)
 2. truncation so that all texts are of the same length (all but one model)
 3. if only one known-author document given - split into halves
@@ -13,7 +21,6 @@
 7. threshold-based binary classification (θ)
 
 ### Options space:
-
 - size of N-grams (n)
     - from 3 to 10 for characters
     - from 1 to 3 for words
