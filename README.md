@@ -10,8 +10,8 @@ preprocessing:
     - on speaker type (HL/FL)
     
 clasification type:
-    - multiclass
-    - intrinsic authorship attribution
+- multiclass
+- intrinsic authorship attribution
 
 algorythm:
 1. tokenization for word n-grams (of length n)
