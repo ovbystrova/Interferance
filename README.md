@@ -1,6 +1,7 @@
 # Interference
 
 ## [Author Verification Using Common N-Gram Profiles of Text Documents](https://www.aclweb.org/anthology/C14-1038.pdf)
+[presentation](https://docs.google.com/presentation/d/1BZhBRqKzosFH2LZMjeQsJ-l_2NAoIszGsNeXn3zk0Z8/edit#slide=id.g7e294f0bb6_0_100)
 
 ### PIPELINE:
 1. tokenization for word n-grams (of length n)
