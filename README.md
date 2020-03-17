@@ -27,12 +27,12 @@ clasification type:
 - intrinsic authorship attribution
 
 algorythm:
-**1. tokenization for word n-grams (of length n)**
-**2. truncation so that all texts are of the same length** (all but one model in the original, we can test if cutting improves the results)
+1. **tokenization for word n-grams (of length n)**
+2. **truncation so that all texts are of the same length** (all but one model in the original, we can test if cutting improves the results)
 3. if only one known-author document given - split into halves
-**4. calculation of n-gram profiles (P)**
-**5. cutoff of the most frequent L** or fraction f **from the profile**
-**6. distance calculation - mean over r(di, u, A) for all di in A**
+4. **calculation of n-gram profiles (P)**
+5. **cutoff of the most frequent L** or fraction f **from the profile**
+6. **distance calculation - mean over r(di, u, A) for all di in A**
 7. threshold-based binary classification (θ) in our case **multiclass classification with minimal distance**
 
 ### Options space:
