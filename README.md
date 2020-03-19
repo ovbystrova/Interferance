@@ -5,7 +5,6 @@
 
 ### TODO:
 - save the result of data preprocessing
-- add FORWARD MULTIPLE method to both classes so that test train split works
 - train/test split
     - on language (imbalanced classes!)
     - on speaker type (HL/FL)
