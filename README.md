@@ -9,7 +9,7 @@
 - train/test split
     - on language (imbalanced classes!)
     - on speaker type (HL/FL)
-- ?? do we want to cut each test into multiple of the mode length since we already have imbalanced classes and are probably going to cut classes to the same size ??
+- ?? do we want to cut each test into multiple of the mode length since we already have imbalanced classes and are probably going to cut classes to the same size ?? (MAYBE LATER)
 - test the classiffiers on real data
     - on language - cut classes to the same size (leaving the smallest ones out)
     - on speaker type (HL/FL)
