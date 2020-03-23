@@ -1,4 +1,5 @@
 import numpy as np
+from tqdm import tqdm
 from collections import Counter
 from modules.single_classifier import SingleClassifier
 
@@ -89,6 +90,42 @@ class EnsambleClassifier():
       """
       sum_distances = self.confidence_summing(classifier_distances)
       return [min(class_dist, key=class_dist.get) for class_dist in sum_distances]
+
+
+    def forward_ensamble(self, method='majority', confidence=False):
+      """
+      predicts classes using the ensemble
+
+      :param method: str ('majority' or 'weight'), nethod of voting to use,
+                     optional, default 'majority'
+      :param confidence: bool, whether to return proximity score for each class,
+                         optional, default False
+      :return:
+        if confidence == False:
+          list of int or str, resulting prediction on each object
+        if confidence == true:
+          list of tuple (res, dist)
+          :return res: int or str, resulting prediction
+          :return dists: dict {str or int: float or int}, proximity to each class
+      """
+      responses = [classifier.forward_all() for classifier in tqdm(self.classifiers)]
+      dists = False
+      if method == 'majority':
+        votes = [SingleClassifier.only_classes(response) for response in responses]
+        res = self.majority_vote(votes)
+      elif method == 'weight':
+        dists = [SingleClassifier.only_distances(response) for response in responses]
+        res = self.weighted_vote(dists)
+      else:
+        raise KeyError(f'Expected method "majority" or "weight", got "{method}"')
+      if confidence:
+        if dists:
+          return list(zip(res, self.confidence_summing(dists)))
+        else:
+          dists = [SingleClassifier.only_distances(response) for response in responses]
+          return list(zip(res, self.confidence_summing(dists)))
+      else:
+        return res
 
 
     def forward_multiple(self, xs, truncate=True, method='majority', confidence=False):
