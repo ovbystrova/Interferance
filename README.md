@@ -4,11 +4,6 @@
 [presentation](https://docs.google.com/presentation/d/1BZhBRqKzosFH2LZMjeQsJ-l_2NAoIszGsNeXn3zk0Z8/edit#slide=id.g7e294f0bb6_0_100)
 
 ### TODO:
-- save the result of data preprocessing
-- train/test split
-    - on language (imbalanced classes!)
-    - on speaker type (HL/FL)
-- ?? do we want to cut each test into multiple of the mode length since we already have imbalanced classes and are probably going to cut classes to the same size ?? (MAYBE LATER)
 - test the classiffiers on real data
     - on language - cut classes to the same size (leaving the smallest ones out)
     - on speaker type (HL/FL)
@@ -17,7 +12,7 @@
 Things that are **done** are in **bold**.
 
 ### PIPELINE:
-- train/test split
+- **train/test split**
     - on language (imbalanced classes!)
     - on speaker type (HL/FL)
     
