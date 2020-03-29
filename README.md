@@ -35,7 +35,7 @@ In the original article the authors had interinsic authorship attribution task a
   2. TF-IDF on word bigrams + logistic regression with parameter search
   3. word2vec + logistic regression with parameter search
   4. word2vec + perceptron 
-6. [comparing results]()
+6. [comparing results](https://github.com/ovbystrova/Interference/blob/master/Report.ipynb)
 
 ### Architectural choices
 - We decided to onbly use ensemble classifiers as they performed the best in the article.
