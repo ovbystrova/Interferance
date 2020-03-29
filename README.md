@@ -67,7 +67,7 @@ In the original article the authors had interinsic authorship attribution task a
 ![lb](https://github.com/ovbystrova/Interference/raw/master/data/lb_only.png)
 
 ## Discussion
-One can see that in ALL cases the simplest baseline model (TF-IDF + logistic regression) outperforms all others.  It is interesting that on of the radius distance models outperforms NN on language background, as NN shows bad results on LB. Another thing to notice is that charachter models are outperformed by word models on train, but not on test. Generally, longer n-grams yeild better results, but the rule also holds more true on train than on test.
+One can see that in ALL cases the simplest baseline model (TF-IDF + logistic regression) outperforms all others.  It is interesting that on of the radius distance models, namely 4-class 50-word word bigrams, outperforms NN. Another thing to notice is that charachter models are outperformed by word models on train, but not on test. Generally, longer n-grams yeild better results, but the rule also holds more true on train than on test.
 
 The question is why does the radius distance is outperformed by the baseline, the simplest of the models? One could argue it is due to the method being unaplicable for multiclass classification, and being specifically created for intrinsic authorship attribution. 
 
