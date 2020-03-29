@@ -1,0 +1,21 @@
+,train/test mode,class number,class length,ngram_type,ngram_size,accuracy_score
+0,train,9,50,word,1-grams,0.397222
+1,train,9,50,word,2-grams,0.558333
+2,train,9,50,word,3-grams,0.516667
+3,train,4,50,word,1-grams,0.612500
+4,train,4,50,word,2-grams,0.693750
+5,train,4,50,word,3-grams,0.606250
+6,train,4,100,word,1-grams,0.646875
+7,train,4,75,word,1-grams,0.554167
+8,train,4,100,word,2-grams,0.637500
+9,train,4,75,word,2-grams,0.654167
+10,test,9,50,word,1-grams,0.422222
+11,test,9,50,word,2-grams,0.533333
+12,test,9,50,word,3-grams,0.488889
+13,test,4,50,word,1-grams,0.700000
+14,test,4,50,word,2-grams,0.750000
+15,test,4,50,word,3-grams,0.700000
+16,test,4,100,word,1-grams,0.700000
+17,test,4,75,word,1-grams,0.550000
+18,test,4,100,word,2-grams,0.637500
+19,test,4,75,word,2-grams,0.616667

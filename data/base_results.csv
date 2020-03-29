@@ -1,0 +1,5 @@
+id,model,preprocess,vectorize,native,language_background
+1,logreg,None,tf-idf,0.8659,0.889527
+2,logreg search,regex tokens,tf-idf,0.821839,0.828863
+3,logreg search,regex tokens,w2v bow mean,0.779055,0.772669
+4,1 linear nn,regex tokens + lemmas,w2v bow mean,0.70638,0.757812
