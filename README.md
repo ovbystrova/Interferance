@@ -18,24 +18,24 @@ In the original article the authors had interinsic authorship attribution task a
 
 ### Pipeline
 1. [preprocessing](https://github.com/ovbystrova/Interference/blob/master/JSON_Files.ipynb)
-  1. tokenization for word n-grams (of length n)
-  2. truncation so that all texts are of the same length (omitting the shorter texts)
-  3. train/test split  (correcting for imbalanced classes!)
-    1. on FL, native language
-    2. on LB, speaker type
-3. building classifiers [for each parameter combination](https://github.com/ovbystrova/Interference/blob/master/Class.ipynb)
-  1. calculation of n-gram profiles (P)
-  2. cutoff of the most frequent L
-  3. distance calculation
-4. multiclass classification with minimal distance for each ensemble, averaging the results
-    1. on FL, [native language](https://github.com/ovbystrova/Interference/blob/master/Language_Testing.ipynb)
-    2. on LB, [speaker type](https://github.com/ovbystrova/Interference/blob/master/LB_Testing.ipynb)
-5. building [baselines](https://github.com/ovbystrova/Interference/blob/master/Baseline.ipynb)
-  1. TF-IDF + logistic regression
-  2. TF-IDF on word bigrams + logistic regression with parameter search
-  3. word2vec + logistic regression with parameter search
-  4. word2vec + perceptron 
-6. [comparing results](https://github.com/ovbystrova/Interference/blob/master/Report.ipynb)
+  - tokenization for word n-grams (of length n)
+  - truncation so that all texts are of the same length (omitting the shorter texts)
+  - train/test split  (correcting for imbalanced classes!)
+    - on FL, native language
+    - on LB, speaker type
+2. building classifiers [for each parameter combination](https://github.com/ovbystrova/Interference/blob/master/Class.ipynb)
+  - calculation of n-gram profiles (P)
+  - cutoff of the most frequent L
+  - distance calculation
+3. multiclass classification with minimal distance for each ensemble, averaging the results
+    - on FL, [native language](https://github.com/ovbystrova/Interference/blob/master/Language_Testing.ipynb)
+    - on LB, [speaker type](https://github.com/ovbystrova/Interference/blob/master/LB_Testing.ipynb)
+4. building [baselines](https://github.com/ovbystrova/Interference/blob/master/Baseline.ipynb)
+  - TF-IDF + logistic regression
+  - TF-IDF on word bigrams + logistic regression with parameter search
+  - word2vec + logistic regression with parameter search
+  - word2vec + perceptron 
+5. [comparing results](https://github.com/ovbystrova/Interference/blob/master/Report.ipynb)
 
 ### Architectural choices
 - We decided to onbly use ensemble classifiers as they performed the best in the article.
